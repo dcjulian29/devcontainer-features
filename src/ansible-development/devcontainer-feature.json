@@ -1,0 +1,59 @@
+{
+  "id": "ansible-development",
+  "name": "ansible-development",
+  "version": "1.0.0",
+  "description": "Set up an environment with the tools for development of Ansible roles and playbooks.",
+  "options": {
+    "version": {
+      "type": "string",
+      "default": "latest",
+      "description": "Version of Ansible to use"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.associations": {
+          "**/handlers/*.yml": "ansible",
+          "**/tasks/*.yml": "ansible",
+          "**/tests/*.yml": "ansible",
+          "**/playbooks/*.yml": "ansible",
+          "**/examples/*.yml": "ansible"
+        },
+        "ansible.ansible.useFullyQualifiedCollectionNames": true,
+        "ansible.ansibleLint.enabled": true,
+        "ansible.python.interpreterPath": "/usr/bin/python3",
+        "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+        "editor.rulers": [
+          90,
+          120
+        ],
+        "yaml.yamlVersion": "1.2",
+        "yaml.format.enable": true,
+        "yaml.format.singleQuote": true,
+        "yaml.format.bracketSpacing": true,
+        "yaml.validate": true,
+        "yaml.completion": true,
+        "yaml.schemaStore.enable": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "redhat.ansible",
+        "streetsidesoftware.code-spell-checker",
+        "editorconfig.editorconfig",
+        "samuelcolvin.jinjahtml"
+      ]
+    }
+  },
+  "containerEnv": {
+    "ANSIBLE_CONFIG": "${containerWorkspaceFolder}/ansible.cfg",
+    "containerWorkspaceFolder": "${containerWorkspaceFolder}",
+    "PATH": "/opt/ansible/bin:${PATH}"
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/docker-in-docker",
+    "ghcr.io/devcontainers/features/git",
+    "ghcr.io/devcontainers/features/python"
+  ],
+  "postCreateCommand": ["/opt/ansible/postCreateCommand.sh"]
+}
