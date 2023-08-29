@@ -1,7 +1,7 @@
 {
   "id": "ansible-development",
   "name": "ansible-development",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Set up an environment with the tools for development of Ansible roles and playbooks.",
   "options": {
     "version": {

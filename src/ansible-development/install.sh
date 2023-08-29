@@ -34,7 +34,8 @@ source /opt/ansible/bin/activate
 
 cd \${containerWorkspaceFolder}
 
-if [ -f requirements.yml ]; then
+echo "Checking '$PWD' for requirements..."
+if [ -f 'requirements.yml' ]; then
   ansible-galaxy collection install -r requirements.yml
   ansible-galaxy install -r requirements.yml
 fi
