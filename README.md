@@ -1,6 +1,6 @@
 # Devcontainer Features
 
-[![Tests](https://github.com/dcjulian29/devcontainer-features/actions/workflows/test.yaml/badge.svg)](https://github.com/dcjulian29/devcontainer-features/actions/workflows/test.yaml)
+[![Tests](https://github.com/dcjulian29/devcontainer-features/actions/workflows/test.yml/badge.svg)](https://github.com/dcjulian29/devcontainer-features/actions/workflows/test.yml)
 
 This repo contains my custom devcontainer features.
 
