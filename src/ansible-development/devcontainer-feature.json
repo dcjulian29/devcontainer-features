@@ -1,7 +1,8 @@
 {
   "id": "ansible-development",
   "name": "ansible-development",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "documentationURL": "https://github.com/dcjulian29/devcontainers-features/tree/main/src/ansible-development",
   "description": "Set up an environment with the tools for development of Ansible roles and playbooks.",
   "options": {
     "version": {
@@ -46,14 +47,11 @@
     }
   },
   "containerEnv": {
-    "ANSIBLE_CONFIG": "${containerWorkspaceFolder}/ansible.cfg",
-    "containerWorkspaceFolder": "${containerWorkspaceFolder}",
     "PATH": "/opt/ansible/bin:${PATH}"
   },
   "installsAfter": [
-    "ghcr.io/devcontainers/features/docker-in-docker",
-    "ghcr.io/devcontainers/features/git",
-    "ghcr.io/devcontainers/features/python"
+    "ghcr.io/devcontainers/features/docker-outside-of-docker",
+    "ghcr.io/devcontainers/features/docker-in-docker"
   ],
   "postCreateCommand": ["/opt/ansible/postCreateCommand.sh"]
 }
