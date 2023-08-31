@@ -1,7 +1,7 @@
 {
   "id": "ansible-development",
   "name": "ansible-development",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "documentationURL": "https://github.com/dcjulian29/devcontainers-features/tree/main/src/ansible-development",
   "description": "Set up an environment with the tools for development of Ansible roles and playbooks.",
   "options": {
@@ -53,5 +53,5 @@
     "ghcr.io/devcontainers/features/docker-outside-of-docker",
     "ghcr.io/devcontainers/features/docker-in-docker"
   ],
-  "postCreateCommand": ["/opt/ansible/postCreateCommand.sh"]
+  "postStartCommand": ["/opt/ansible/postStartCommand.sh"]
 }
