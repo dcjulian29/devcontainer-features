@@ -1,7 +1,7 @@
 {
   "id": "ansible-development",
   "name": "ansible-development",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "documentationURL": "https://github.com/dcjulian29/devcontainers-features/tree/main/src/ansible-development",
   "description": "Set up an environment with the tools for development of Ansible roles and playbooks.",
   "options": {
@@ -21,22 +21,25 @@
           "**/playbooks/*.yml": "ansible",
           "**/examples/*.yml": "ansible"
         },
+        "ansible.ansible.path": "/opt/ansible/bin/ansible",
         "ansible.ansible.useFullyQualifiedCollectionNames": true,
         "ansible.ansibleLint.enabled": true,
-        "ansible.python.interpreterPath": "/usr/bin/python3",
+        "ansible.ansibleNavigator.path": "",
+        "ansible.python.activationScript": "/opt/ansible/bin/activate",
+        "ansible.validation.lint.path": "/opt/ansible/bin/ansible-lint",
         "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
         "editor.rulers": [
           90,
           120
         ],
+        "terminal.integrated.defaultProfile.linux": "bash",
         "yaml.yamlVersion": "1.2",
         "yaml.format.enable": true,
         "yaml.format.singleQuote": true,
         "yaml.format.bracketSpacing": true,
         "yaml.validate": true,
         "yaml.completion": true,
-        "yaml.schemaStore.enable": true,
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "yaml.schemaStore.enable": true
       },
       "extensions": [
         "redhat.ansible",
