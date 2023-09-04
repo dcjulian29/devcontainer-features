@@ -1,7 +1,7 @@
 {
   "id": "ansible-development",
   "name": "ansible-development",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "documentationURL": "https://github.com/dcjulian29/devcontainers-features/tree/main/src/ansible-development",
   "description": "Set up an environment with the tools for development of Ansible roles and playbooks.",
   "options": {

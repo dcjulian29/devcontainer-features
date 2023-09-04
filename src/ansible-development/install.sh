@@ -47,7 +47,7 @@ cat >> /opt/ansible/postCreateCommand.sh << EOF
 
 ANSIBLE_CONFIG="\$PWD/ansible.cfg"
 
-echo \nexport ANSIBLE_CONFIG="\$ANSIBLE_CONFIG" >> ~/.profile
+echo "export ANSIBLE_CONFIG=\"\$ANSIBLE_CONFIG\"" >> ~/.profile
 
 echo "Checking '\$PWD' for requirements..."
 if [ -f 'requirements.yml' ]; then
