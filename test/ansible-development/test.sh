@@ -18,6 +18,7 @@ check "version" ansible-test --version
 check "version" ansible-vault --version
 check "version" yamllint --version
 
+check "ansible_cfg" printenv ANSIBLE_CONFIG
 
 check "version" molecule --version
 
