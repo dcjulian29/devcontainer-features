@@ -42,10 +42,12 @@ pip install ansible==${ANSIBLE_VERSION} \
             httpx \
             passlib
 
-cat >> /opt/ansible/postStartCommand.sh << EOF
+cat >> /opt/ansible/postCreateCommand.sh << EOF
 #! /usr/bin/env bash
 
-export ANSIBLE_CONFIG="\$PWD/ansible.cfg"
+ANSIBLE_CONFIG="\$PWD/ansible.cfg"
+
+echo \nexport ANSIBLE_CONFIG="\$ANSIBLE_CONFIG" >> ~/.profile
 
 echo "Checking '\$PWD' for requirements..."
 if [ -f 'requirements.yml' ]; then
@@ -54,7 +56,7 @@ if [ -f 'requirements.yml' ]; then
 fi
 EOF
 
-chmod 0755 /opt/ansible/postStartCommand.sh
+chmod 0755 /opt/ansible/postCreateCommand.sh
 
 rm -rf /var/lib/apt/lists/*
 
