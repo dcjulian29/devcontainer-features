@@ -14,7 +14,7 @@ fi
 
 export DEBIAN_FRONTEND=noninteractive
 
-apt-get install -y --no-install-recommends wget ca-certificates vim colordiff
+apt-get install -y --no-install-recommends curl wget ca-certificates vim colordiff
 
 if ! type git > /dev/null 2>&1; then
   apt-get install -y --no-install-recommends git
@@ -35,12 +35,17 @@ virtualenv /opt/ansible --system-site-packages
 source /opt/ansible/bin/activate
 
 pip install ansible==${ANSIBLE_VERSION} \
-            ansible-lint \
-            docker \
-            molecule \
-            toml \
-            httpx \
-            passlib
+              ansible-lint \
+              docker \
+              molecule \
+              toml \
+              httpx \
+              proxmoxer \
+              pywinrm \
+              pywinrm[credssp] \
+              passlib \
+              netaddr \
+              kubernetes
 
 cat >> /opt/ansible/postCreateCommand.sh << EOF
 #! /usr/bin/env bash
@@ -52,6 +57,7 @@ echo export ANSIBLE_CONFIG="\$ANSIBLE_CONFIG" >> ~/.profile
 echo "Checking '\$PWD' for requirements..."
 if [ -f 'requirements.yml' ]; then
   ansible-galaxy collection install -r requirements.yml
+  ansible-galaxy role install -r requirements.yml
   ansible-galaxy install -r requirements.yml
 fi
 EOF
