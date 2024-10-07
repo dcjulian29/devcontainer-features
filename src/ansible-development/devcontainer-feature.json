@@ -1,16 +1,9 @@
 {
   "id": "ansible-development",
   "name": "ansible-development",
-  "version": "1.5.0",
+  "version": "10.4.0",
   "documentationURL": "https://github.com/dcjulian29/devcontainers-features/tree/main/src/ansible-development",
   "description": "Set up an environment with the tools for development of Ansible roles and playbooks.",
-  "options": {
-    "version": {
-      "type": "string",
-      "default": "latest",
-      "description": "Version of Ansible to use"
-    }
-  },
   "customizations": {
     "vscode": {
       "settings": {

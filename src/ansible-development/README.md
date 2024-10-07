@@ -1,4 +1,3 @@
-
 # ansible-development (ansible-development)
 
 Set up an environment with the tools for development of Ansible roles and playbooks.
@@ -7,21 +6,16 @@ Set up an environment with the tools for development of Ansible roles and playbo
 
 ```json
 "features": {
-    "ghcr.io/dcjulian29/devcontainer-features/ansible-development:1": {}
+    "ghcr.io/dcjulian29/devcontainer-features/ansible-development:10": {}
 }
 ```
 
-## Options
 
-| Options Id | Description | Type | Default Value |
-|-----|-----|-----|-----|
-| version | Version of Ansible to use | string | latest |
+## VS Code Extensions
 
-## Customizations
-
-### VS Code Extensions
-
+- `ms-python.python`
 - `redhat.ansible`
+- `redhat.vscode-yaml`
 - `streetsidesoftware.code-spell-checker`
 - `editorconfig.editorconfig`
 - `samuelcolvin.jinjahtml`
